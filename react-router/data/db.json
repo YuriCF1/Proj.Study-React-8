@@ -1,0 +1,18 @@
+{    "products": [
+      {
+        "name": "PC GAMER",
+        "price": "900",
+        "id": 1
+      },
+      {
+        "name": "Teclado",
+        "price": "60",
+        "id": 1
+      },
+      {
+        "name": "Mouse",
+        "price": "100",
+        "id": 1
+      }
+    ]
+  }
