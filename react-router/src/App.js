@@ -18,6 +18,7 @@ function App() {
       {/* O que está fora de Routes, existirá em todas as páginas */}
       <h1>React Router</h1>
       <BrowserRouter>
+      {/* 2 - Links com react router */}
       <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
