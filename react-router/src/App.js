@@ -13,6 +13,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Product from "./pages/Product";
+import Info from "./pages/Info";
 
 function App() {
   return (
@@ -20,13 +21,15 @@ function App() {
       {/* O que está fora de Routes, existirá em todas as páginas */}
       <h1>React Router</h1>
       <BrowserRouter>
-      {/* 2 - Links com react router */}
-      <Navbar />
+        {/* 2 - Links com react router */}
+        <Navbar />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home />} /> 
           <Route path="/about" element={<About />} />
           {/* 4 - Rota dinâmica */}
           <Route path="/products/:idUrl" element={<Product />}></Route>
+          {/* 6 - Nested route */}
+          <Route path="/products/:idUrl/info" element={<Info />}></Route> {/*Route cria a rota, MAS ELAS ESTÃO SENDO ACESSADAS NAS PÁGINAS*/}
         </Routes>
       </BrowserRouter>
     </div>

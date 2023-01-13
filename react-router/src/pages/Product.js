@@ -1,11 +1,12 @@
 import React from "react";
 
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useFetch } from "../hooks/useFetch";
 
 
 const Product = () => {
   // 4 -  Rotda dinâmica
+  // useParams desestrutura todos os parâmetros do objeto
   const { idUrl } = useParams(); //O 'idUrl' faz referência ao idUrl da url chmada em 'products', no App.js
 
   //5 - Carregamento dado individual
@@ -22,6 +23,9 @@ const Product = () => {
         <div>
           <h2>{product.name}</h2>
           <p>R$: {product.price}</p>
+          {/* 6 - Nested routes */}
+          <Link to={`/products/${product.id}/info`}>Mais informações</Link> {/*'/' na frente para partir da atual URL*/}
+
         </div>
 
       )}
