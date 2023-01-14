@@ -34,7 +34,7 @@ function App() {
           {/* 7 - Set no match route - 404 */}
           <Route path="*" element={<NotFound />}></Route>
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> 
     </div>
   );
 }

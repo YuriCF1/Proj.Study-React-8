@@ -3,17 +3,22 @@ import React from 'react'
 
 import "./Navbar.css"
 
-import { Link } from "react-router-dom" 
+import { Link, NavLink} from "react-router-dom" 
 
 const Navbar = () => {
   return (
     <nav>
         {/* Redirecionamento trocando o componente*/}
-        <Link to="/">Home</Link>
-        <Link to="/about">Sobre</Link>
+        {/* <Nav to="/">Home</Nav>
+        <Nav to="/about">Sobre</Nav> */}
+
+        {/* NavLink é a mesma coisa de Link, porém ele permite a atrobito IsActive */}
+        {/* Uma maneira de não utilizar a classe padrão 'active' */}
+        <NavLink to="/" /* className={({isActive}) => (isActive ? 'estaAtivo' : 'naoAtivo')}*/>Home</NavLink>
+        <NavLink to="/about">Sobre</NavLink>
         {/* Redirecionamento fazendo reload  da página */}
         {/* <a href=""></a> */} 
-    </nav>
+    </nav> 
   )
 }
 

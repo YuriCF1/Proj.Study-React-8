@@ -15,6 +15,7 @@ nav a:hover {
 }
 
 .active { /*Ativado quando uma página estiver ativa*/
+    border-radius: 25px;
     background-color: #000;
     color: #fff;
 }
