@@ -8,6 +8,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // Components
 import Navbar from "./components/Navbar";
+import SearchForm from "./components/SearchForm";
 
 // Pages
 import Home from "./pages/Home";
@@ -15,6 +16,7 @@ import About from "./pages/About";
 import Product from "./pages/Product";
 import Info from "./pages/Info";
 import NotFound from "./pages/NotFound";
+import Search from "./pages/Search";
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
       <BrowserRouter>
         {/* 2 - Links com react router */}
         <Navbar />
+        {/* 9 - Search */}
+        <SearchForm />
         <Routes>
           <Route path="/" element={<Home />} /> 
           <Route path="/about" element={<About />} />
@@ -33,7 +37,10 @@ function App() {
           <Route path="/products/:idUrl/info" element={<Info />}></Route> {/*Route cria a rota, MAS ELAS ESTÃO SENDO ACESSADAS NAS PÁGINAS*/}
           {/* 7 - Set no match route - 404 */}
           <Route path="*" element={<NotFound />}></Route>
+          {/* 9 - Search page */}
+          <Route path="/search" element={<Search />}></Route>
         </Routes>
+
       </BrowserRouter> 
     </div>
   );
