@@ -7,7 +7,7 @@ const Search = () => {
   const [searchParms] = useSearchParams();
 
   const url = "http://localhost:3001/products?" + searchParms; //Pega os parâmetros depois do '?'. O JSON server já é programado para esperar um 'q=parametro', e devolver a resposta
-  let paramtroPesquisado = searchParms.get('q')
+  let paramtroPesquisado = searchParms.get("q");
   console.log(paramtroPesquisado);
   console.log(searchParms);
 

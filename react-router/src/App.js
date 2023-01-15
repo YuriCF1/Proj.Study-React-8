@@ -27,20 +27,23 @@ function App() {
         {/* 2 - Links com react router */}
         <Navbar />
         {/* 9 - Search */}
-        <SearchForm /> {/*Criar um in put, navega até a url modificada com o input. Mudando para o componente '/search', onde pega os parâmetros e faz requisição*/}
+        <SearchForm />{" "}
+        {/*Criar um in put, navega até a url modificada com o input. Mudando para o componente '/search', onde pega os parâmetros e faz requisição*/}
         <Routes>
-          <Route path="/" element={<Home />} /> 
+          <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           {/* 4 - Rota dinâmica */}
           <Route path="/products/:idUrl" element={<Product />}></Route>
           {/* 6 - Nested route */}
-          <Route path="/products/:idUrl/info" element={<Info />}></Route> {/*Route cria a rota, MAS ELAS ESTÃO SENDO ACESSADAS NAS PÁGINAS*/}
+          <Route path="/products/:idUrl/info" element={<Info />}></Route>{" "}
+          {/*Route cria a rota, MAS ELAS ESTÃO SENDO ACESSADAS NAS PÁGINAS*/}
           {/* 7 - Set no match route - 404 */}
           <Route path="*" element={<NotFound />}></Route>
           {/* 9 - Search page */}
-          <Route path="/search" element={<Search />}></Route> {/* Só '/search' pois pode vim qualquer complemento de acordo com a pesquisa*/}
+          <Route path="/search" element={<Search />}></Route>{" "}
+          {/* Só '/search' pois pode vim qualquer complemento de acordo com a pesquisa*/}
         </Routes>
-      </BrowserRouter> 
+      </BrowserRouter>
     </div>
   );
 }
