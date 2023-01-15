@@ -27,7 +27,7 @@ function App() {
         {/* 2 - Links com react router */}
         <Navbar />
         {/* 9 - Search */}
-        <SearchForm />
+        <SearchForm /> {/*Criar um in put, navega até a url modificada com o input. Mudando para o componente '/search', onde pega os parâmetros e faz requisição*/}
         <Routes>
           <Route path="/" element={<Home />} /> 
           <Route path="/about" element={<About />} />
@@ -38,9 +38,8 @@ function App() {
           {/* 7 - Set no match route - 404 */}
           <Route path="*" element={<NotFound />}></Route>
           {/* 9 - Search page */}
-          <Route path="/search" element={<Search />}></Route>
+          <Route path="/search" element={<Search />}></Route> {/* Só '/search' pois pode vim qualquer complemento de acordo com a pesquisa*/}
         </Routes>
-
       </BrowserRouter> 
     </div>
   );
