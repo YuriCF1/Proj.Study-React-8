@@ -4,7 +4,7 @@
 import "./App.css";
 // 1 - Config react router
 import React from "react"; // Avoiding error: Error : 'React' must be in scope when using JSX react/react-in-jsx-scope
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 // Components
 import Navbar from "./components/Navbar";
@@ -42,6 +42,8 @@ function App() {
           {/* 9 - Search page */}
           <Route path="/search" element={<Search />}></Route>{" "}
           {/* Só '/search' pois pode vim qualquer complemento de acordo com a pesquisa*/}
+          {/* 10 - Redirect */}
+          <Route parth="/company" element={ <Navigate to="/about" />}/> {/*Mudando a rota antiga com relevancia organica (company), para a nova(about) */}
         </Routes>
       </BrowserRouter>
     </div>
