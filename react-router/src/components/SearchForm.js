@@ -10,7 +10,7 @@ const SearchForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    navigate("/search?q=" + query);
+    navigate("/search?q=" + query); {/*mandando o resultado da pesquisa como parâmetro de busca, já configura no JSON SERVER*/}
   };
 
   return (
